@@ -1,8 +1,9 @@
 use chrono::NaiveDate;
-use serde::{Deserialize, Serialize};
+use serde::{ Serialize ,Deserialize};
 
 
 #[derive(Debug , Serialize , Deserialize , Clone)]
+
 pub enum Priority {
     Low,
     Medium,
@@ -16,7 +17,7 @@ pub struct Task{
     pub priority : Priority,
     pub completed : bool
 }
-impl Task(){
+impl Task{
     pub fn new(title : String , description : String , due_date : NaiveDate , priority : Priority )-> Self{
     Task{
        title ,
